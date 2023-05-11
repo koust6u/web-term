@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Velocity Calculator</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: { inlineMath: [['$$', '$$']], displayMath: [['$$$', '$$$']] }
+      });
+  </script>
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+    <script src="../js/calculator.js"></script>
+  </head>
+  <body>  
+    <a href="https://ko.wikipedia.org/wiki/%EC%B9%98%EC%98%AC%EC%BD%A5%EC%8A%A4%ED%82%A4_%EB%A1%9C%EC%BC%93_%EB%B0%A9%EC%A0%95%EC%8B%9D">
+        <h1>치올 코프스키 로켓 방정식</h1>
+    </a>
+    <article style="width: 50vh;">
+      치올콥스키 로켓 방정식(Chil's rocket equation)은 로켓의 진행 방향으로 추진력을 발생시키는 엔진의 작동과 로켓의 질량 변화에 
+      대한 수학적 관계를 설명하는 방정식입니다.이 방정식은 로켓 엔진의 속도 및 효율성, 로켓의 질량 변화, 로켓의 총 속도 변화량 등을 계산하는 데에 사용됩니다.
+      이를 통해 로켓 설계자들은 로켓의 엔진 크기, 
+      연료 양, 탑재할 수 있는 유용한 하중의 양 등을 결정할 수 있습니다.
+      치올콥스키 로켓 방정식은 우주 탐사와 위성 발사 등의 우주 항공 기술 개발에 매우 중요한 역할을 합니다.
+    </article>
+    <br>
+    <img src="../images/Константин_Циолковский.jpg">
+    <br>
+    <p>로켓의 최종 속도(vf)는 다음 공식을 사용하여 계산할 수 있다.</p>
+    <p>$$ v_f = v_i + u \ln(\frac{m_i}{m_f}) $$</p>
+    <form>
+      <label for="initialVelocity">초기 속도 $$(m/s)$$:</label>
+      
+      <input type="number" id="initialVelocity" name="initialVelocity"><br>
+
+      <label for="exhaustVelocity">연료 분출 속력$$(m/s)$$:</label>
+      <input type="number" id="exhaustVelocity" name="exhaustVelocity"><br>
+
+      <label for="initialMass">초기 질량$$(kg)$$:</label>
+      <input type="number" id="initialMass" name="initialMass"><br>
+
+      <label for="finalMass">최종 질량$$(kg)$$:</label>
+      <input type="number" id="finalMass" name="finalMass"><br>
+      <input type="button" value="계산" onclick="calculateFinalVelocity()">
+    </form>
+    <br>
+    <p>최종 속력$$(m/s)$$: <span id="result"></span> </p>
+
+    <hr>
+    <a href="https://ko.wikipedia.org/wiki/%ED%83%88%EC%B6%9C_%EC%86%8D%EB%8F%84">
+      <h1>탈출 속도 방정식</h1>
+    </a>
+    <article style="width: 50vh;">
+      탈출 속도는 물체가 운동 에너지(속도)가 행성 등의 중력 위치 에너지(궤도 속도)를 넘는 속도를 의미합니다. 대체로 궤도 운동을 하는 천체나 위성 등의 중력장을 빠져나가기 위한 최소한도의 속도로 이해됩니다. 중력장을 벗어나기 위해서는 방향보다는 얼마나 빠르냐가 중요하므로, 학술적으로는 탈출 속도는 벡터가 아닌 스칼라 형태입니다.
+    </article>
+    <br>
+    <img src="../images/UntidyWindingEasternglasslizard-mobile.gif">
+    <br>
+    <p>탈출 속도(ve)는 다음 공식을 사용하여 계산할 수 있다.</p>
+    <p>$$v_e = \sqrt{\frac{2GM}{r}}$$</p>
+    <br>
+    <label><input type="radio" name="choice" value="planet" checked>행성</label>
+    <label><input type="radio" name="choice" value="satellite"> 위성</label>
+    <br>
+    <label for="selectList">목록 선택:</label>
+    <select id="selectList" onclick="showSelected()"></select>
+    <br>
+    <p><span id=selectedValue>선택한 행성의 탈출 속도는 617.5(km/s) 입니다.</span></p>
+    <br>
+    <div id="result"></div>
+    <h2>직접 천체의 탈출 속도 구하기</h2>
+    <label for="massInput">질량 ($$10^6t$$)  :</label>
+    <input type="number" id="massInput" step="0.01" value="1000">
+    <br>
+    <label for="radiusInput">반지름 (km):</label>
+    <input type="number" id="radiusInput" step="0.01" value="6378.1">
+    <button id="calculateButton" onclick="calculate()">계산</button>
+    <p>탈출을 위한 최소 속력$$(km/s)$$: <span id="ve"></span> </p>
+    <hr>
+  </body>
+</html>
