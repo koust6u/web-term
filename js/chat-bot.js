@@ -9,9 +9,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 async function generateText() {
   const prompt = document.getElementById("prompt").value;
+  document.getElementById("prompt").value = '';
   const parameters = {
     "model": "gpt-3.5-turbo",
-    "messages": [{"role": "user", "content": prompt+"라는 말에 어린아이의 동심을 지켜 주기위해 외계인인척 반말로 대답해야해" , "name":"PNU"}],
+    "messages": [{"role": "user", "content": prompt+"라는 말에 어린아이의 동심을 지켜 주기위해 외계인인척 반말로 대답해야해 " , "name":"PNU"}],
 
     "temperature": 0.7
   };
@@ -33,8 +34,8 @@ async function generateText() {
     message = data.choices[0].message.content;
     console.log(message);
   }catch(error){
-      message = "에러 발생!!!";
+      message = "자리를 비웠어요. 잠시후 다시 대화를 시도해주세요!!!";
   }
-  text = text + "Little green men: " + message + "<hr>";
+  text = text + "Little green man: " + message + "<hr>";
   responseDiv.innerHTML = text;
 }

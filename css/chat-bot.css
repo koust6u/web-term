@@ -1,0 +1,13 @@
+.chat {
+  text-align: center;
+}
+input[type="text"]{
+  width: 50vw;
+  height: 1vh;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}

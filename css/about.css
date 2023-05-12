@@ -1,0 +1,14 @@
+img {
+  float: right;
+}
+
+.lab {
+  clear: right;
+  text-align: center;
+}
+.lab> ul{
+  display: block
+}
+.contact{
+  text-align: center;
+}
