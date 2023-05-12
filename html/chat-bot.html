@@ -9,13 +9,13 @@
     </style>
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-    
+    <link rel="stylesheet" type="text/css" href="../css/chat-bot.css">
 </head>
 <body>
 <header>
     <nav>
         <div>
-            <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
+        <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
         </div>
         <!-- list 사용!-->
         <ul>
@@ -28,20 +28,23 @@
             <a href="./calculator.html">계산기</a>
             <a href="./chat-bot.html">챗봇</a>
             <a href="./today-info.html">우주상식</a>
+            <a href="./tic-tac-to.html">게임</a>
             </div>
         </li>
         </ul>
     </nav>
-
     </header>
-    <main>
+    <main class="chat">
         <h1>외계인과 대화하기</h1>
+        <hr>
+        <img style="width: 30vw; height: 50vh;" src="../images/귀여운_외계인-removebg-preview.png">
+        <div id="response"></div>
         <div>
             <label for="prompt">Prompt:</label>
             <input type="text" id="prompt" name="prompt">
+            <button id="generate-btn">Generate</button>
         </div>
-        <button id="generate-btn">Generate</button>
-        <div id="response"></div>
+        
     
     </main>
     <footer>

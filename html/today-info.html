@@ -11,9 +11,9 @@
     </style>
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-  
+    <link rel="stylesheet" type="text/css" href="../css/today-info.css">
 </head>
-<body>
+<body class="info">
   <header>
     <nav>
       <div>
@@ -30,17 +30,21 @@
             <a href="./calculator.html">계산기</a>
             <a href="./chat-bot.html">챗봇</a>
             <a href="./today-info.html">우주상식</a>
+            <a href="./tic-tac-to.html">게임</a>
           </div>
         </li>
       </ul>
     </nav>
-
   </header>
-  <main>
+  <hr>
+  <main class="today">  
     <h1>오늘의 우주 상식.</h1>
-    <h2 id="title"></h2>
-    <p id="paragraphs"></p>
+    <p>이 페이지는 매일 하나씩 새로운 우주 상식에 대해 알려드려요.</p>
+    <h3 id="title"></h3>
     <img id="image" style="width:50vh; height: 50vh;">
+    <div class="contents">
+      <p id="paragraphs"></p>
+    </div>
     <script>
       func();
     </script>
