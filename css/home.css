@@ -1,0 +1,24 @@
+
+.container {
+    margin-top: 10px;
+    height: 93vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../images/59b2349684d902730f710b65f05ecb80.gif');
+    background-size: 100%;
+    background-position: center;
+}
+
+.image-text {
+color: white;
+text-align: center;
+padding: 20px;
+max-width: 50%;
+background-color: rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+margin: 20px;
+}

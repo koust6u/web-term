@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <title>Chat GPT API Example</title>
     <script src="../js/chat-bot.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+    </style>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    
 </head>
 <body>
-    <h1>Chat GPT API Example</h1>
-    <div>
-        <label for="prompt">Prompt:</label>
-        <input type="text" id="prompt" name="prompt">
+<header>
+    <nav>
+        <div>
+            <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
+        </div>
+        <!-- list 사용!-->
+        <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./guest-book.html">Guest-book</a></li>
+        <li class="dropdown">
+            <a href="#">PlayGround</a>
+            <div class="dropdown-content">
+            <a href="./calculator.html">계산기</a>
+            <a href="./chat-bot.html">챗봇</a>
+            <a href="./today-info.html">우주상식</a>
+            </div>
+        </li>
+        </ul>
+    </nav>
+
+    </header>
+    <main>
+        <h1>외계인과 대화하기</h1>
+        <div>
+            <label for="prompt">Prompt:</label>
+            <input type="text" id="prompt" name="prompt">
+        </div>
+        <button id="generate-btn">Generate</button>
+        <div id="response"></div>
+    
+    </main>
+    <footer>
+        <hr>
+        <div class="footer-container">
+            <img src="../images/free-icon-alien-6542680.png" alt="외계인 프로필 이미지">
+            <div class="footer-text">
+            <p>이 블로그는 외계인이 운영합니다.</p>
+            <p>여러분은 외계인의 일상을 엿볼 수 있습니다.</p>
+            <p>문의: <a href="https://github.com/koust6u">koust6u@github.com</a></p>
+            <p>&copy; 2023 Alien Blog. All Rights Reserved.</p>
+        </div>
     </div>
-    <button id="generate-btn">Generate</button>
-    <div id="response"></div>
+    </footer>
 </body>
 </html>

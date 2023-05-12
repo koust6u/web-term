@@ -10,12 +10,41 @@
           tex2jax: { inlineMath: [['$$', '$$']], displayMath: [['$$$', '$$$']] }
       });
   </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+  </style>
+  <title>My Website</title>
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+
   <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
     <script src="../js/calculator.js"></script>
   </head>
-  <body>  
-    <a href="https://ko.wikipedia.org/wiki/%EC%B9%98%EC%98%AC%EC%BD%A5%EC%8A%A4%ED%82%A4_%EB%A1%9C%EC%BC%93_%EB%B0%A9%EC%A0%95%EC%8B%9D">
+  
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
+        </div>
+        <!-- list 사용!-->
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./guest-book.html">Guest-book</a></li>
+          <li class="dropdown">
+            <a href="#">PlayGround</a>
+            <div class="dropdown-content">
+              <a href="./calculator.html">계산기</a>
+              <a href="./chat-bot.html">챗봇</a>
+              <a href="./today-info.html">우주상식</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <a href="https://ko.wikipedia.org/wiki/%EC%B9%98%EC%98%AC%EC%BD%A5%EC%8A%A4%ED%82%A4_%EB%A1%9C%EC%BC%93_%EB%B0%A9%EC%A0%95%EC%8B%9D">
         <h1>치올 코프스키 로켓 방정식</h1>
     </a>
     <article style="width: 50vh;">
@@ -78,6 +107,19 @@
     <input type="number" id="radiusInput" step="0.01" value="6378.1">
     <button id="calculateButton" onclick="calculate()">계산</button>
     <p>탈출을 위한 최소 속력$$(km/s)$$: <span id="ve"></span> </p>
-    <hr>
+
+    </main>
+    <footer>
+      <hr>
+      <div class="footer-container">
+        <img src="../images/free-icon-alien-6542680.png" alt="외계인 프로필 이미지">
+        <div class="footer-text">
+          <p>이 블로그는 외계인이 운영합니다.</p>
+          <p>여러분은 외계인의 일상을 엿볼 수 있습니다.</p>
+          <p>문의: <a href="https://github.com/koust6u">koust6u@github.com</a></p>
+          <p>&copy; 2023 Alien Blog. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
