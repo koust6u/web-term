@@ -12,7 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../css/chat-bot.css">
 </head>
 <body>
+    <!-- Semantic 사용 (header)-->
 <header>
+    <!-- Semantic 사용 (nav)-->
     <nav>
         <div>
         <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
@@ -37,16 +39,21 @@
     <main class="chat">
         <h1>외계인과 대화하기</h1>
         <hr>
-        <img style="width: 30vw; height: 50vh;" src="../images/귀여운_외계인-removebg-preview.png">
+        <div id="loading">
+            <img id="loadingImg"style="width: 30vw; height: 50vh;" src="../images/about.png" alt="로딩중 ..">
+            <p id="loadingMessage"></p>
+        </div>
         <div id="response"></div>
         <div>
+            <p id="errorMessage"></p>
             <label for="prompt">Prompt:</label>
             <input type="text" id="prompt" name="prompt">
-            <button id="generate-btn">Generate</button>
+            <button id="generate-btn" >전송! </button>
         </div>
         
     
     </main>
+    <!-- Semantic 사용 (footer)-->
     <footer>
         <hr>
         <div class="footer-container">

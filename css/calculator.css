@@ -1,3 +1,9 @@
+/*
+  flex 기능 활용
+  description: 각 각의 계산기를 하나의 element로 가지는 flex
+  스타일 적용 이유는 계산기 기능이 추후에도 추가 될 수 있기 때문에
+  유지 보수 측면에서 스타일 변경을 최소화하기 위함.
+*/
 .flex-container {
   text-align: center;
   display: flex;
@@ -10,7 +16,9 @@
 h1 {
   color: white;
 }
-.flex-container> div{
+
+/*combinator 활용*/
+.flex-container div{
   background-color: rgba(1, 0.5, 10, 0.6);
   background-size: 100% 100%;
   margin: 10px;
@@ -21,6 +29,7 @@ h1 {
 img{
   border-radius: 5%;
 }
+/*float 기능 활용*/
 #float-right{
   float: right;
   border-radius: 3%;
@@ -30,6 +39,7 @@ img{
   text-align: center;
 }
 
+/*Pseudo-class 적용(hover)*/
 #float-right:hover {
   animation-name: rotate;
   animation-duration: 1s;
@@ -45,7 +55,10 @@ img{
     transform: rotate(360deg);
   }
 }
-
+/*
+  Attribute selector 사용
+  description: 숫자 타입의 input에 대한 동일 스타일 적용
+*/
 input[type="number"] {
   width: 15vw;
   height: 1vh;
@@ -57,6 +70,10 @@ input[type="number"] {
   font-size: 16px;
 }
 
+/*
+  Attribute selector 사용
+  description: text 타입의 input에 대한 동일 스타일 적용
+*/
 input[type="text"]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
@@ -74,6 +91,54 @@ input[type="text"]:focus {
   transition: background-color 0.3s ease-in-out;
 }
 
+/*
+  Pseudo-class 적용(hover)
+  description: 버튼에 배경색 변화
+  */
 .pink-button:hover {
   background-color: #f8c1f8;
+}
+
+/*
+  Pseudo-class 적용(in-range) 
+  description: 숫자 타입의 input 1~2,147,483,647 범위 만 허용
+  해당 범위 만족하면 background-> 초록색
+*/
+/*
+  Attribute selector 사용
+  description: 숫자 타입의 input에 대한 동일 스타일 적용
+*/
+input[type="number"]:in-range {
+  border: 2px solid green;
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+/*
+  Pseudo-class 적용(in-range) 
+  description: 숫자 타입의 input 1~2,147,483,647 범위 만 허용
+  해당 범위 만족하지 못하면 background-> 빨간색
+*/
+/*
+  Attribute selector 사용
+  description: 숫자 타입의 input에 대한 동일 스타일 적용
+*/
+input[type="number"]:out-of-range {
+  border: 2px solid red;
+  background-color: lightpink;
+  color: darkred;
+}
+/*
+  Pseudo-class 적용(checked)
+  description: 라디오 타입의 입력에 대하여 check된 항목은 
+  label의 폰트크기가150% 확대와 폰트 색 -> skyblue
+*/
+/*
+  Attribute selector 사용
+  description: 라디오 타입의 input에 대한 동일 스타일 적용
+*/
+/*combinator 활용*/
+input[type="radio"]:checked + label{
+  font-size: 150%;
+  color: skyblue;
 }

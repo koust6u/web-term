@@ -10,6 +10,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
   </style>
+  <!-- 
+    --tic-tac-to 게임 대한 java Script코드--
+    1. table 기능 활용 -> 3 x 3 table 각각의 td를 tic-tac-to의 칸으로 활용하여 게임을 만들었습니다.
+    2. 설명 -> 컨셉은 컴퓨터와  tic-tac-to 게임을 하여 승무패를 가리는 방식입니다. 실제 컴퓨터 턴에는 
+      별다른 로직이 없이 난수를 생성하여 modular연산을 통해 무작위로 선택되지 않은 칸에 대해 선택하는 방식입니다.
+      먼저 가로,세로, 대각 중에 3칸을 채우는 쪽이 이기는 식의 게임입니다. 단 아무도 한줄을 채우지 못하면 무승부입니다.
+  -->
   <script>
     let board = [[0,0,0], [0,0,0], [0,0,0]]; // 0: 빈 칸, 1: 사용자(O), 2: 컴퓨터(X)
     let turn = 1; // 사용자의 턴부터 시작
@@ -46,7 +53,11 @@
         }  
     };
 
-
+  /*
+  reset 함수는 게임이 끝나거나 사용자가 처음부터 게임을 다시 하고 싶을때 호출 되는 함수입니다.
+  이 함수가 호출되면 td에 채워진 o나 x 에 대한 이미지들이 모두 지워지고 게임의 흐름이 초기화되어 다시 
+  시작되는 방식입니다.
+  */
   function reset() {
     board = [[0,0,0], [0,0,0], [0,0,0]];
     turn = 1;
@@ -58,6 +69,10 @@
       }
     }
   }
+  /*
+  세로, 가로 , 대각선을 먼저 채우면 이기는 게임 규칙 때문에 매 턴이 끝나면 checkwin 함수가 호출되어
+  세로, 가로, 대각선에 대해 먼저 채우진 쪽이 있는지 확인하는 함수 입니다.
+  */
   function checkWin(player) {
   for (let i = 0; i < 3; i++) {
       if (board[i][0] == player && board[i][1] == player && board[i][2] == player) return true; // 가로 체크
@@ -68,6 +83,10 @@
   return false;
   }
   
+  /*
+  무승부를 확인하는 함수이지만 실제로는 모든 같이 채워져잇따면 true반환하여 더 이상 게임 진행이
+  불가능 한경우를 체크하는 기능을 합니다.
+  */
   function checkDraw() {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
@@ -80,7 +99,9 @@
   </script>
   </head>
   <body>
+    <!-- Semantic 사용 (header)-->
     <header>
+      <!-- Semantic 사용 (nav)-->
       <nav>
         <div>
           <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
@@ -125,6 +146,7 @@
   
         <div class="gif-container" onclick="reset()">다시하기</div>
     </main>
+    <!-- Semantic 사용 (footer)-->
     <footer>
       <hr>
       <div class="footer-container">

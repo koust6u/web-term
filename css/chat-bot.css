@@ -1,6 +1,11 @@
 .chat {
   text-align: center;
 }
+/*
+  attribute selector 사용
+  description: text 타입의 input에 동일 폰트와
+  스타일 적용
+*/
 input[type="text"]{
   width: 50vw;
   height: 1vh;
@@ -10,4 +15,26 @@ input[type="text"]{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
+}
+
+
+#errorMessage{
+  color: red;
+  font-size: 15px;
+}
+
+#prompt{
+  border: 1px solid black;
+}
+
+#generate-btn {
+  width: 10vw;
+  height: 5vh;
+  background-color: greenyellow;
+  border-color: greenyellow;
+  border-radius: 10%;
+}
+
+#generate-btn:hover{
+  background-color: palegreen;
 }

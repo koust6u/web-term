@@ -1,4 +1,20 @@
+/* 
+문제: js를 embed style에서는 문제 없었지만 js file로 분리하니 tag들을 인식 하지 못하는 오류가 발생하였다.
+따라서 오류 해결을 위해 addEventlistner에 DOMContentLoaded를 추가하여 DOM이 loading 될 때 자동으로 
+변수들을 최기화하여 인식에 대한 문제를 해결하였다.
 
+기능 설명1: 해당 함수의 기능은 select option을 동적으로 내용을 바꾸어주기 위해 radio button의 선택 값에 따라
+      select option의 원소 값들을 바꾸어준다.
+      즉, value가 행성인 radio 버튼이 선택되면 태양계의 행성들의 탈출 속도를 선택할 수있게 해주고
+      위성 radio버튼을 선택하면 태양계의 대표적 위성들의 탈출 속도를 선택 할 수 있도록 select option의 목록을 동적으로 바꾸어주는 역핳을 한다.
+      해당 탈출 속도의 값을 하드 코딩되어 값을 가진다.
+
+기능 설명 2: 로켓방적식에 대한 값을 특정 입력을 통해 최후 속력을 반환해주는 함수 구현 (치올콥스키 로켓 방정식)
+
+추가: 사용자가 직접 탈출 속도를 구할 수 있도록 행(위)성의 반지름, 질량등을 입력으로 구할 수 있도록 JS로 간단한 탈출 속도를 구할 수 있는 함수도 제공한다.(탈출 속도 방정식)
+
+
+*/
 document.addEventListener('DOMContentLoaded', function() {
   
 
@@ -42,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
   })
   
   function setSelectList(list) {
-  // select 요소의 기존 옵션을 모두 제거합니다.
+  // select 요소의 기존 옵션을 모두 제거.
     selectList.innerHTML = '';
-    // 새로운 옵션을 생성하여 select 요소에 추가합니다.
+    // 새로운 옵션을 생성하여 select 요소에 추가.
     list.forEach(item => {
     const option = document.createElement('option');
     option.value = item.value;
@@ -54,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+/*
+
+*/
 //치올콥스키 로켓 방정식
 function calculateFinalVelocity() {
   const initialVelocity = parseFloat(document.getElementById('initialVelocity').value);

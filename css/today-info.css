@@ -11,7 +11,16 @@
   width: 50vw;
   height: auto; 
 } 
-
+/*combinator 활용*/
 .today > hr{
   color: black;
+}
+
+/*
+  peseudo-elemet:first-letter
+  description: 첫번째 글자 가독서을 위해 크기와 색 조정
+*/
+#paragraphs::first-letter{
+  font-size: 200%;
+  color: orange;
 }

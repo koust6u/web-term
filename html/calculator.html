@@ -23,7 +23,9 @@
   </head>
   
   <body>
+    <!-- Semantic 사용 (header)-->
     <header>
+      <!-- Semantic 사용 (nav)-->
       <nav>
         <div>
           <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
@@ -65,16 +67,16 @@
         <form>
           <label for="initialVelocity">초기 속도 $$(m/s)$$:</label>
           
-          <input type="number" id="initialVelocity" name="initialVelocity"><br>
+          <input type="number" id="initialVelocity" name="initialVelocity" min="1" max="2,147,483,647" required><br>
   
           <label for="exhaustVelocity">연료 분출 속력$$(m/s)$$:</label>
-          <input type="number" id="exhaustVelocity" name="exhaustVelocity"><br>
+          <input type="number" id="exhaustVelocity" name="exhaustVelocity" min="1" max="2,147,483,647" required><br>
   
           <label for="initialMass">초기 질량$$(kg)$$:</label>
-          <input type="number" id="initialMass" name="initialMass"><br>
+          <input type="number" id="initialMass" name="initialMass" min="1" max="2,147,483,647" required><br>
   
           <label for="finalMass">최종 질량$$(kg)$$:</label>
-          <input type="number" id="finalMass" name="finalMass"><br>
+          <input type="number" id="finalMass" name="finalMass" min="1" max="2,147,483,647" required><br>
           <input type="button" value="계산" class="pink-button" onclick="calculateFinalVelocity()">
         </form>
         <br>
@@ -94,8 +96,10 @@
         <p>탈출 속도(ve)는 다음 공식을 사용하여 계산할 수 있다.</p>
         <p>$$v_e = \sqrt{\frac{2GM}{r}}$$</p>
         <br>
-        <label><input type="radio" name="choice" value="planet" checked>행성</label>
-        <label><input type="radio" name="choice" value="satellite"> 위성</label>
+        <div id="check">
+          <input type="radio" name="choice" value="planet" checked><label>행성</label>
+          <input type="radio" name="choice" value="satellite"><label>위성</label>
+        </div>
         <br>
         <label for="selectList">목록 선택:</label>
         <select id="selectList" onclick="showSelected()"></select>
@@ -105,15 +109,16 @@
         <div id="result"></div>
         <h2>직접 천체의 탈출 속도 구하기</h2>
         <label for="massInput">질량 ($$10^6t$$)  :</label>
-        <input type="number" id="massInput" step="0.01" value="1000">
+        <input type="number" id="massInput" step="0.01" value="1000" min="1" max="2,147,483,647" required>
         <br>
         <label for="radiusInput">반지름 (km):</label>
-        <input type="number" id="radiusInput" step="0.01" value="6378.1">
+        <input type="number" id="radiusInput" step="0.01" value="6378.1" min="1" max="2,147,483,647" required>
         <button id="calculateButton" class="pink-button" onclick="calculate()">계산</button>
         <p>탈출을 위한 최소 속력$$(km/s)$$: <span id="ve"></span> </p>
   
       </div>
     </main>
+    <!-- Semantic 사용 (footer)-->
     <footer>
       <hr>
       <div class="footer-container">
