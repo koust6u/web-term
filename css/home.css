@@ -1,7 +1,8 @@
 
+
 .container {
-    margin-top: 10px;
-    height: 93vh;
+    height: 100vh;
+    min-height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,7 +13,19 @@
     background-size: 100%;
     background-position: center;
 }
+.container2{
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
 
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+}
 .image-text {
 color: white;
 text-align: center;
