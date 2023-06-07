@@ -2,9 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
     <meta charset="UTF-8">
     <title>Chat GPT API Example</title>
     <script src="../js/chat-bot.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
     </style>
@@ -19,23 +22,25 @@
     <nav>
         <div>
         <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
-        </div>
-        <!-- list 사용!-->
-        <ul>
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./guest-book.html">Guest-book</a></li>
+    </div>
+    <div class="hamburger" style="display:none" onclick="slide()">☰</div>
+    <ul class="nav_items">
+        <li class="navbar_menu"><a href="./home.html">Home</a></li>
+        <li class="navbar_menu"><a href="./about.html">About</a></li>
+        <li class="navbar_menu"><a href="./guest-book.html">Guest-book</a></li>
         <li class="dropdown">
-            <a href="#">PlayGround</a>
-            <div class="dropdown-content">
+        <a href="#">PlayGround</a>
+        <div class="dropdown-content">
             <a href="./calculator.html">계산기</a>
             <a href="./chat-bot.html">챗봇</a>
+            <a href="./rover.html">화성 탐사</a>
             <a href="./today-info.html">우주상식</a>
             <a href="./tic-tac-to.html">게임</a>
-            </div>
+        </div>
         </li>
-        </ul>
+    </ul>
     </nav>
+
     </header>
     <main class="chat">
         <h1>외계인과 대화하기</h1>
@@ -68,4 +73,5 @@
     </div>
     </footer>
 </body>
+<script src="../js/common.js"></script>
 </html>

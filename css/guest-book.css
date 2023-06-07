@@ -7,6 +7,20 @@ main{
   align-items: center;
 }
 
+#errorMessage{
+  color: red;
+  font-size: 15px;
+}
+
+@media (max-width: 900px){
+  h2{
+    font-size: 24px;
+  }
+  pre{
+    font-size: 2vw;
+    width: 100%;
+  }
+}
 /*
   pesudo-element 적용
   description: 과거 작성 방명록의 모든 작성일시 크기와 색 변화 

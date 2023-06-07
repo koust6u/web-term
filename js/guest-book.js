@@ -11,8 +11,11 @@ function addGuestbookEntry() {
     const nameInput = document.getElementById("name");
     const regionInput = document.getElementById("region");
     const messageInput = document.getElementById("message");
-    
-    if(messageInput.value === "" || nameInput.value==="")return;
+    const errorMessage = document.getElementById("errorMessage");
+    if(messageInput.value === "" || nameInput.value===""){
+        errorMessage.innerHTML = "값을 모두 입력하시길 바랍니다."
+        return;
+    }
     const name = nameInput.value;
     const region = regionInput.value;
     const message = messageInput.value;

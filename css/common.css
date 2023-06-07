@@ -1,5 +1,55 @@
+@media (max-width: 900px){
+    .logo{
+        z-index: 2;
+    }
+    nav{
+        position: relative;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 20vh;
+        background-color: whitesmoke;
+        margin-top: 30vh;
+        width: 100%;
+        z-index: 1;
+        padding-top: 3vh;
+        position: absolute;
 
+    }
+
+    nav ul li a {
+        border-bottom: 3px solid black;
+    }
+    nav ul li a:hover{
+        color: grey;
+    }
+
+    .dropdown-content a{
+        position: relative;
+        border-bottom: 0px;
+    }
+
+    nav{
+        align-items: center;
+    }
+}
+
+.hamburger {
+    color: var(--accent-color);
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;    
+    color: #333;
+    outline: none;
+
+}
 body{
+    padding-top: 7vh;
     font-family: 'Hi Melody', cursive;
     font-size: 24px;
 }
@@ -51,8 +101,14 @@ a {
     display: none;
     position: absolute;
     background-color: #808080;
-    min-width: 160px;
-    z-index: 1;
+    z-index: 5;
+}
+.navbar__toggleBtn {
+    color: var(--accent-color);
+    position: absolute;
+    right: 15px;
+    display: none;
+    font-size: 20px;
 }
 /*combinator 활용*/
 .dropdown:hover .dropdown-content {

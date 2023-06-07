@@ -1,4 +1,4 @@
-const API_KEY = "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";
+const API_KEY = "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";
 const API_URL = "https://api.openai.com/v1/chat/completions";
 const generateButton = document.getElementById("generate-btn");
 var loadingMessage;
@@ -42,6 +42,7 @@ async function generateText() {
     errorMessage.innerHTML = "값을 입력하시길 바랍니다."
     promptStyle.style.borderColor= "red";
     btn.disabled = false;
+    alert("값을 입력하고 전송 부탁드립니다.🙏");
     return;
   }
   else{
@@ -97,3 +98,4 @@ function hideLoading(){
   loadingImg.src= '../images/about.png';
   loadingMessage.innerHTML= " ";
 }
+

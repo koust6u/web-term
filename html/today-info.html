@@ -6,9 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/today-info.js"></script>
     <title>오늘의 우주 상식</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        if ($(window).width() > 900) {
+          $('.hamburger').hide();
+          $('.nav_items').show();
+        } else {
+          $('.hamburger').show();
+          $('.nav_items').hide();
+        }
+      });
+  
+  
+      $(window).resize(function () {
+        if ($(window).width() > 900) {
+          $('.hamburger').hide();
+          $('.nav_items').show();
+        } else {
+          $('.hamburger').show();
+          $('.nav_items').hide();
+        }
+      });
+  
+      $(document).ready(function () {
+        $('.hamburger').click(function () {
+          if ($('.nav_items').is(':visible')) {
+            $('.nav_items').slideUp();
+          } else {
+            $('.nav_items').slideDown();
+          }
+        });
+      });
+    </script>
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/today-info.css">
@@ -21,16 +55,17 @@
       <div>
         <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
       </div>
-      <!-- list 사용!-->
-      <ul>
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./guest-book.html">Guest-book</a></li>
+      <div class="hamburger" style="display:none" onclick="slide()">☰</div>
+      <ul class="nav_items">
+        <li class="navbar_menu"><a href="./home.html">Home</a></li>
+        <li class="navbar_menu"><a href="./about.html">About</a></li>
+        <li class="navbar_menu"><a href="./guest-book.html">Guest-book</a></li>
         <li class="dropdown">
           <a href="#">PlayGround</a>
           <div class="dropdown-content">
             <a href="./calculator.html">계산기</a>
             <a href="./chat-bot.html">챗봇</a>
+            <a href="./rover.html">화성 탐사</a>
             <a href="./today-info.html">우주상식</a>
             <a href="./tic-tac-to.html">게임</a>
           </div>

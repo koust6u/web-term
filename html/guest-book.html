@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <script src="../js/guest-book.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
     </style>
@@ -14,27 +16,28 @@
 <body>
     <!-- Semantic 사용 (header)-->
     <header>
-        <!-- Semantic 사용 (nav)-->
-        <nav>
+    <nav>
         <div>
             <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
         </div>
-        <!-- list 사용!-->
-        <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./guest-book.html">Guest-book</a></li>
+        <div class="hamburger" style="display:none" onclick="slide()">☰</div>
+        <ul class="nav_items">
+            <li class="navbar_menu"><a href="./home.html">Home</a></li>
+            <li class="navbar_menu"><a href="./about.html">About</a></li>
+            <li class="navbar_menu"><a href="./guest-book.html">Guest-book</a></li>
             <li class="dropdown">
             <a href="#">PlayGround</a>
             <div class="dropdown-content">
                 <a href="./calculator.html">계산기</a>
                 <a href="./chat-bot.html">챗봇</a>
+                <a href="./rover.html">화성 탐사</a>
                 <a href="./today-info.html">우주상식</a>
                 <a href="./tic-tac-to.html">게임</a>
             </div>
             </li>
         </ul>
         </nav>
+    
     </header>
     <main>
         <h2>이전 방명록</h2>
@@ -51,7 +54,7 @@
     작성 일시: 1998년 12월 11일
     지역: Milky Way
     이름: minjong kim
-    내용: 서로 이웃 추가해요!  @&#125;-`-,----- 꽃 한송이 두고 갑니다.. 총총
+    내용: 서로 이웃 추가해요!  @&#125;-`-,----- 꽃 한송이 두고 갑니다..총총
     </pre>
     <hr>
     <pre>
@@ -62,13 +65,13 @@
     </pre>
     <hr>
     </div>
-
+    
     <h1>방명록</h1>
     <form>
         <label for="name">이름:</label>
         <input type="text" id="name" name="name" required><br><br>
         <label for="region">지역:</label>
-        <select id="region" name="region" required>
+        <select id="region" name="region">
             <option value="milkyWay">Milky Way</option>
             <option value="andromeda">Andromeda</option>
             <option value="blackEye">Black Eye</option>
@@ -99,4 +102,5 @@
     </footer>
     
 </body>
+<script src="../js/common.js"></script>
 </html>
