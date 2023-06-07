@@ -13,38 +13,6 @@
       });
   </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      if ($(window).width() > 900) {
-        $('.hamburger').hide();
-        $('.nav_items').show();
-      } else {
-        $('.hamburger').show();
-        $('.nav_items').hide();
-      }
-    });
-
-
-    $(window).resize(function () {
-      if ($(window).width() > 900) {
-        $('.hamburger').hide();
-        $('.nav_items').show();
-      } else {
-        $('.hamburger').show();
-        $('.nav_items').hide();
-      }
-    });
-
-    $(document).ready(function () {
-      $('.hamburger').click(function () {
-        if ($('.nav_items').is(':visible')) {
-          $('.nav_items').slideUp();
-        } else {
-          $('.nav_items').slideDown();
-        }
-      });
-    });
-  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
   </style>
@@ -74,6 +42,7 @@
             <div class="dropdown-content">
               <a href="./calculator.html">계산기</a>
               <a href="./chat-bot.html">챗봇</a>
+              <a href="./rover.html">화성 탐사</a>
               <a href="./today-info.html">우주상식</a>
               <a href="./tic-tac-to.html">게임</a>
             </div>
@@ -166,4 +135,5 @@
       </div>
     </footer>
   </body>
+  <script src="../js/common.js"></script>
 </html>

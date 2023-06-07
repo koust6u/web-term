@@ -98,3 +98,4 @@ function hideLoading(){
   loadingImg.src= '../images/about.png';
   loadingMessage.innerHTML= " ";
 }
+
