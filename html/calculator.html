@@ -12,12 +12,45 @@
           tex2jax: { inlineMath: [['$$', '$$']], displayMath: [['$$$', '$$$']] }
       });
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      if ($(window).width() > 900) {
+        $('.hamburger').hide();
+        $('.nav_items').show();
+      } else {
+        $('.hamburger').show();
+        $('.nav_items').hide();
+      }
+    });
+
+
+    $(window).resize(function () {
+      if ($(window).width() > 900) {
+        $('.hamburger').hide();
+        $('.nav_items').show();
+      } else {
+        $('.hamburger').show();
+        $('.nav_items').hide();
+      }
+    });
+
+    $(document).ready(function () {
+      $('.hamburger').click(function () {
+        if ($('.nav_items').is(':visible')) {
+          $('.nav_items').slideUp();
+        } else {
+          $('.nav_items').slideDown();
+        }
+      });
+    });
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
   </style>
   <title>My Website</title>
   <link rel="stylesheet" type="text/css" href="../css/common.css">
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
     <script src="../js/calculator.js"></script>
@@ -31,11 +64,11 @@
         <div>
           <a href="./home.html"><img class="logo" src="../images/free-icon-alien-6542680.png" alt="logo"></a>
         </div>
-        <!-- list 사용!-->
-        <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./guest-book.html">Guest-book</a></li>
+        <div class="hamburger" style="display:none" onclick="slide()">☰</div>
+        <ul class="nav_items">
+          <li class="navbar_menu"><a href="./home.html">Home</a></li>
+          <li class="navbar_menu"><a href="./about.html">About</a></li>
+          <li class="navbar_menu"><a href="./guest-book.html">Guest-book</a></li>
           <li class="dropdown">
             <a href="#">PlayGround</a>
             <div class="dropdown-content">
@@ -46,7 +79,7 @@
             </div>
           </li>
         </ul>
-      </nav>
+      </nav>  
     </header>
     <main class="flex-container"><!--flex box 사용-->
       <div>
@@ -92,7 +125,7 @@
           탈출 속도는 물체가 운동 에너지(속도)가 행성 등의 중력 위치 에너지(궤도 속도)를 넘는 속도를 의미합니다. 대체로 궤도 운동을 하는 천체나 위성 등의 중력장을 빠져나가기 위한 최소한도의 속도로 이해됩니다. 중력장을 벗어나기 위해서는 방향보다는 얼마나 빠르냐가 중요하므로, 학술적으로는 탈출 속도는 벡터가 아닌 스칼라 형태입니다.
         </article>
         <br>
-        <img src="../images/UntidyWindingEasternglasslizard-mobile.gif">
+        <img src="../images/UntidyWindingEasternglasslizard-mobile.gif" class="big-img">
         <br>
         <p>탈출 속도(ve)는 다음 공식을 사용하여 계산할 수 있다.</p>
         <p>$$v_e = \sqrt{\frac{2GM}{r}}$$</p>
